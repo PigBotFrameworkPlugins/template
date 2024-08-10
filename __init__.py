@@ -1,5 +1,5 @@
 from pbf.utils import MetaData
-from pbf import logger
+from pbf.setup import logger
 from pbf.utils.Register import Command, Message, Notice, Request, Meta
 from pbf.controller.Data import Event
 from pbf.controller.Client import Msg
