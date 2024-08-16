@@ -20,9 +20,14 @@ meta_data = MetaData(
 )
 
 
-# 在PBF启动时、插件被装载时调用
+# 在插件被装载时调用
 def _enter():  # 如不需要可以删除
     logger.info("Test PBF Plugin loaded")
+
+# 在插件被卸载时调用
+def _exit():  # 如不需要可以删除
+    logger.info("Test PBF Plugin unloaded")
+# 关于`_enter`与`_exit`函数的更多信息，请参见文档
 
 
 # 插件开放给其他插件调用的接口
